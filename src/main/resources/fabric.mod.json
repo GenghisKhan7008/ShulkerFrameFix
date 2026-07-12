@@ -4,7 +4,7 @@
     "version": "${version}",
     "name": "ShulkerFrameFix",
     "description": "Prevents shulker box lids from breaking item frames placed above them",
-    "authors": [ "You" ],
+    "authors": [ "GenghisKhan7008" ],
     "environment": "*",
     "entrypoints": {
         "main": [ "com.example.shulkerframefix.ShulkerFrameFix" ]
