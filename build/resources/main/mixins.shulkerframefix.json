@@ -1,0 +1,13 @@
+{
+    "required": true,
+    "package": "com.example.shulkerframefix.mixin",
+    "refmap": "shulkerframefix-refmap.json",
+    "minVersion": "0.6",
+    "mixins": [
+        "ShulkerBoxBlockEntityMixin",
+        "ItemFrameEntityMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

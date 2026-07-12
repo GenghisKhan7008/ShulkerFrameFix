@@ -1,0 +1,18 @@
+{
+    "schemaVersion": 1,
+    "id": "shulkerframefix",
+    "version": "1.0.0",
+    "name": "ShulkerFrameFix",
+    "description": "Prevents shulker box lids from breaking item frames placed above them",
+    "authors": [ "You" ],
+    "environment": "*",
+    "entrypoints": {
+        "main": [ "com.example.shulkerframefix.ShulkerFrameFix" ]
+    },
+    "mixins": [
+        "mixins.shulkerframefix.json"
+    ],
+    "depends": {
+        "fabric": "*"
+    }
+}

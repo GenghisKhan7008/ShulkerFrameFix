@@ -1,0 +1,45 @@
+plugins {
+    id 'fabric-loom' version '0.8-SNAPSHOT'
+    id 'maven-publish'
+}
+
+sourceCompatibility = 16
+targetCompatibility = 16
+
+archivesBaseName = "shulkerframefix"
+version = "1.0.0"
+group = "com.example"
+
+repositories {
+    maven {
+        name = 'Fabric'
+        url = "https://maven.fabricmc.net"
+    }
+}
+
+minecraft {
+    refmapName = "shulkerframefix-refmap.json"
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.17.1"
+    mappings "net.fabricmc:yarn:1.17.1+build.65:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.11.6"
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+jar {
+    from "LICENSE"
+}
